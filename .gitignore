@@ -3,7 +3,6 @@ venv
 *.pyc
 .env
 
-nntext/settings/local.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
