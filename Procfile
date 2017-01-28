@@ -1,0 +1,1 @@
+web: gunicorn nntext.wsgi --log-file -
