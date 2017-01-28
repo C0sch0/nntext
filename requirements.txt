@@ -13,3 +13,4 @@ requests==2.13.0
 requests-oauthlib==0.7.0
 six==1.10.0
 stripe==1.19.1
+whitenoise==3.3.0

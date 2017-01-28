@@ -22,7 +22,7 @@ EMAIL_HOST_USER = 'cerediego@gmail.com'
 EMAIL_HOST_PASSWORD = 'shakillaCABESON'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
-
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
