@@ -33,7 +33,7 @@ SECRET_KEY = 'mf+@cgyp7g53a#yple$2&4qqz-9@ljdlr6q=hzw*0c9o&d$r9q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.nntexts.co','nntexts.co']
 
 
 # Application definition
