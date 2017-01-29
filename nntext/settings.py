@@ -32,7 +32,7 @@ EMAIL_USE_TLS = True
 SECRET_KEY = 'mf+@cgyp7g53a#yple$2&4qqz-9@ljdlr6q=hzw*0c9o&d$r9q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.nntext.com','nntext.com', 'nntextapp.herokuapp.com']
 
