@@ -148,13 +148,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 
-if DEBUG:
-    MEDIA_URL = '/media/'
-    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static-only")
-    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
-    STATICFILES_DIRS = (
-        os.path.join(os.path.dirname(BASE_DIR), "static", "static"),
-)
+#if DEBUG:
+#    MEDIA_URL = '/media/'
+#    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static-only")
+#    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
+#    STATICFILES_DIRS = (
+#        os.path.join(os.path.dirname(BASE_DIR), "static", "static"),
+#)
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 DEFAULT_HOST = 'www'
@@ -202,7 +202,8 @@ STRIPE_SECRET_KEY = 'sk_test_8iRhx547HDKcVznk8Ts93CRz'
 #STRIPE_PUBLISHABLE_KEY = 'pk_live_reddEuyDmkuGtuyJlKjZezeo'
 #STRIPE_SECRET_KEY = 'sk_live_KcgEGCBQTHoJKJFod0Sazxhg'
 
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
