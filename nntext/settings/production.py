@@ -17,12 +17,13 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'cerediego@gmail.com'
 EMAIL_HOST_PASSWORD = 'shakillaCABESON'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -147,7 +148,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
 
 if DEBUG:
     MEDIA_URL = '/media/'
@@ -202,3 +202,9 @@ STRIPE_SECRET_KEY = 'sk_test_8iRhx547HDKcVznk8Ts93CRz'
 # live keys
 #STRIPE_PUBLISHABLE_KEY = 'pk_live_reddEuyDmkuGtuyJlKjZezeo'
 #STRIPE_SECRET_KEY = 'sk_live_KcgEGCBQTHoJKJFod0Sazxhg'
+
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
