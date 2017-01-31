@@ -14,10 +14,16 @@
           <ul class="nav navbar-nav" margin-bottom=60px>
           {% url 'home' as home %}
           {% url 'about' as about %}
-          {% url 'contact' as contact %}
+          {% url 'project1' as project1 %}
+          {% url 'project2' as project2 %}
+          {% url 'project3' as project3 %}
+
             <li {% if request.path == home %} class="active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
             <li {% if request.path == about %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
-            <li {% if request.path == contact %} class="active" {% endif %}><a href="{% url 'contact' %}">Contact</a></li>
+            <li {% if request.path == project1 %} class="active" {% endif %}><a href="{% url 'project1' %}">Iris Dataset</a></li>
+            <li {% if request.path == project2 %} class="active" {% endif %}><a href="{% url 'project2' %}">Image processing</a></li>
+            <li {% if request.path == project3 %} class="active" {% endif %}><a href="{% url 'project3' %}">Text Prediction</a></li>
+            <li {% if request.path == contact %} class="active" {% endif %}><a href="#">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
               <ul class="dropdown-menu">

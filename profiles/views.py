@@ -13,6 +13,21 @@ def about(request):
 	template = 'about.html'
 	return render(request,template,context)
 
+def project1(request):
+	context = {}
+	template = 'project1.html'
+	return render(request,template,context)
+
+def project2(request):
+	context = {}
+	template = 'project2.html'
+	return render(request,template,context)
+
+def project3(request):
+	context = {}
+	template = 'project3.html'
+	return render(request,template,context)
+
 @login_required
 def userProfile(request):
 	user = request.user

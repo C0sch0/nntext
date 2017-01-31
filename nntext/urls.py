@@ -19,16 +19,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 from profiles import views as profiles_views
-from contact import views as contact_views
-from checkout import views as checkout_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', profiles_views.home, name='home'),
     url(r'^about/$', profiles_views.about, name='about'),
     url(r'^profile/$', profiles_views.userProfile, name='profile'),
-    url(r'^checkout/$', checkout_views.checkout, name='checkout'),
-    url(r'^contact/$', contact_views.contact, name='contact'),
+    url(r'^project1/$', profiles_views.project1, name='project1'),
+    url(r'^project2/$', profiles_views.project2, name='project2'),
+    url(r'^project3/$', profiles_views.project3, name='project3'),
     url(r'^accounts/', include('allauth.urls')),
 
 ]

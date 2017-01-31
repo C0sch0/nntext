@@ -17,14 +17,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'cerediego@gmail.com'
-EMAIL_HOST_PASSWORD = 'shakillaCABESON'
-EMAIL_PORT = '587'
-EMAIL_USE_TLS = True
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -34,7 +26,7 @@ SECRET_KEY = 'mf+@cgyp7g53a#yple$2&4qqz-9@ljdlr6q=hzw*0c9o&d$r9q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.nntext.com','nntext.com', 'nntextapp.herokuapp.com']
+ALLOWED_HOSTS = ['www.nntext.com','nntext.com', 'nntextapp.herokuapp.com','https://nntextapp.herokuapp.com']
 
 
 # Application definition
@@ -48,14 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'profiles',
-    'contact',
     'crispy_forms',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'checkout',
-    'stripe',
 ]
 
 MIDDLEWARE = [
@@ -192,15 +181,6 @@ ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
 ACCOUNT_PASSWORD_MIN_LENGHT = 6
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 
-
-# stripe 
-# test keys
-STRIPE_PUBLISHABLE_KEY = 'pk_test_9fgdmOhjvCBTVvgiRs2JRoCV'
-STRIPE_SECRET_KEY = 'sk_test_8iRhx547HDKcVznk8Ts93CRz'
-
-# live keys
-#STRIPE_PUBLISHABLE_KEY = 'pk_live_reddEuyDmkuGtuyJlKjZezeo'
-#STRIPE_SECRET_KEY = 'sk_live_KcgEGCBQTHoJKJFod0Sazxhg'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
