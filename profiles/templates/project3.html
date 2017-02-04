@@ -1,5 +1,112 @@
 {% extends 'base.html'  %}
-
 {% block content3 %}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Visualizing K-Means algorithm with D3.js</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" />
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<meta property="og:title" content="Visualizing K-Means algorithm with D3.js"/>
+	<meta property="og:url" content="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:description" content="The K-Means algorithm is a popular and simple clustering algorithm. This visualization shows you how it works.Step RestartN (the number of node):K (the number of cluster):NewClick figure or push [Step] button to go to next step.Push [Restart] button to go..."/>
+	<meta property="og:image" content="http://farm8.staticflickr.com/7316/10710273026_68972312f0_o.jpg"/>
+	<meta property="og:site_name" content="TECH-NI Blog"/>
+	<meta property="fb:admins" content="1297551349" />
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="nitoyon">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/en/blog/index.xml" />
+	<link rel="alternate" hreflang="ja_JP" href="http://tech.nitoyon.com/ja/blog/2013/11/07/k-means/">
+</head>
+<body class="en">
+<header class="wrap page-header">
+<div class="wrapped">
+	<h1 id="logo">
+		<a href="/en/blog/" id="logo-blog-en"> </a>
+	</h1>
+</div>
+</header>
+<div class="wrap">
+<div class="wrapped">
+<article>
+<header>
+
+<h1>Visualizing K-Means algorithm with D3.js</h1>
+
+
+<div class="share">
+	
+	<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/" data-lang="en" data-size="horizontal" data-text="Visualizing K-Means algorithm with D3.js - TECH-NI Blog" data-related="nitoyon" data-dnt="true">Tweet</a>
+	<div class="fb-like" data-href="http://tech.nitoyon.com/en/blog/2013/11/07/k-means/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+</div>
+
+</header>
+
+<div id="entry">
+<div class="entry-body">
+<section>
+<p>The K-Means algorithm is a popular and simple clustering algorithm. This visualization shows you how it works.</p>
+
+<div id="kmeans">
+<div><svg></svg></div>
+<div><button id="step">Step</button> <button id="restart" disabled>Restart</button></div>
+<fieldset style="display: inline; margin: .8em 0 1em 0; border: 1px solid #999; padding: .5em">
+<div><label for="N">N (the number of node):</label><input type="number" id="N" min="2" max="1000" value="100"></div>
+<div><label for="K">K (the number of cluster):</label><input type="number" id="K" min="2" max="50" value="5"></div>
+<div><button id="reset">New</button></div>
+</fieldset>
+</div>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script src="/static/javascript/k-means.js"></script>
+
+<ul>
+<li>Click figure or push [Step] button to go to next step.</li>
+<li>Push [Restart] button to go back to initialization step.</li>
+<li>Push [New] button to start new simulation with given <i>N</i> (the number of nodes) and <i>K</i> (the number of clusters).</li>
+<li>Requires modern browsers (tested on IE 10, Firefox 25 and Chrome 30).</li>
+</ul>
+
+<h1>What is K-Means</h1>
+
+<p>You can find a detail description at <a href="http://en.wikipedia.org/wiki/K-means_clustering">k-means clustering - Wikipedia, the free encyclopedia</a>, but it&#39;s too complecated to understand.</p>
+
+<p>Here is simpler steps:</p>
+
+<ol>
+<li><em>Initialization:</em> Create <i>N</i> nodes (circle) and randomly put initial <i>K</i> cluster (cross).</li>
+<li><em>Assignment step:</em> Assign each node (circle) to the nearest cluster (cross).</li>
+<li><em>Update step:</em> Each cluster (cross) move to the centroid of its nodes.</li>
+<li>Go to step 2.</li>
+</ol>
+
+
+</section>
+
+</div>
+
+<footer>
+
+
+</div><!--entry-->
+
+</article>
+
+</div>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/en/posts.js"></script>
+<script src="/javascripts/techni.js"></script>
+<div id="fb-root"></div>
+</body>
+</html>
 {% endblock %}
 

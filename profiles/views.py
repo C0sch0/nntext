@@ -28,9 +28,19 @@ def project3(request):
 	template = 'project3.html'
 	return render(request,template,context)
 
+def project4(request):
+	context = {}
+	template = 'project4.html'
+	return render(request,template,context)
+
 @login_required
 def userProfile(request):
 	user = request.user
 	context = {'user': user}
 	template = 'profile.html'
+	return render(request,template,context)
+
+def index(request):
+	context = {}
+	template = 'index.html'
 	return render(request,template,context)

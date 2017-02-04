@@ -28,6 +28,8 @@ urlpatterns = [
     url(r'^project1/$', profiles_views.project1, name='project1'),
     url(r'^project2/$', profiles_views.project2, name='project2'),
     url(r'^project3/$', profiles_views.project3, name='project3'),
+    url(r'^project4/$', profiles_views.project4, name='project4'),
+    url(r'^index/$', profiles_views.index, name='index'),
     url(r'^accounts/', include('allauth.urls')),
 
 ]
