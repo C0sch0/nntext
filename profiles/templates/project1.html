@@ -2,20 +2,13 @@
 {% block content1 %}
 
 <html lang="en" xmlns:m="http://www.w3.org/1998/Math/MathML">
-
 <head>
   <meta charset="utf-8">
-
   <link rel="stylesheet" href="https://rawgithub.com/yannickulrich/presenter/master/lib/jqMath/UnifrakturMaguntia.css">
   <link rel="stylesheet" href="https://rawgithub.com/yannickulrich/presenter/master/lib/jqMath/jqmath-0.4.0.css">
-
   <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
   <script src="https://rawgithub.com/yannickulrich/presenter/master/lib/jqMath/jqmath-etc-0.4.0.min.js"></script>
-
   <style>
-
-    
-
     line {
       stroke-width: .4px;
     }
@@ -25,24 +18,15 @@
       border: none;
       left: 0px;
     }
-
 </style>
 </head>
+
 <body>
-
-<div>
-
-</div>
-<div>
-
-</div>
 <div id="graph"></div>
-
 <div id="controls">
   <button onclick="step();">Step</button>
   <button onclick="changeK(1);">Increase K</button>
   <button onclick="changeK(-1);">Decrease K</button>
-
   <table id="stats-table">
     <tr>
       <td>
@@ -72,15 +56,11 @@
   var means = [];
 
   var assignments = kmeans.assignPointsToMeans(points, means);
-
   var svg = d3.select('#graph').append('svg').attr('width',960).attr('height',500);
-
   var graph = svg.append('g').attr('transform', 'translate(460,0)');
   var meanLayer = graph.append('g');
-
   var xScale = d3.scale.linear().domain([0,10]).range([0,500]);
   var yScale = d3.scale.linear().domain([0,10]).range([0,500]);
-
   var color = d3.scale.category10();
 
   function redraw() {
@@ -126,21 +106,15 @@
   function step() {
 
     oldAssignments = assignments;
-
     kmeans.moveMeansToCenters(points, assignments, means);
-
     assignments = kmeans.assignPointsToMeans(points, means);
-
     var changeCount = kmeans.countChangedAssignments(assignments, oldAssignments);
-
     var aveDistance = kmeans.findAverageDistancePointToMean(points, means, assignments);
     var aveMeanSeparation = kmeans.findAverageMeanSeparation(means);
     var sse = kmeans.sumSquaredError(points, means, assignments);
-
     var row = d3.select('#stats-table').append('tr');
     row.append('td').html(changeCount);
     row.append('td').html(sse);
-
     redraw();
   }
 
@@ -150,7 +124,6 @@
     if (amt > 0) {
       while (amt--) {
         var i = Math.floor(Math.random() * points.length);
-
         var p = points[i];
         var newPoint = p.slice(0);
 console.log("adding new point "+newPoint);
